@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projet - Marc Apedoh</title>
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Font Awesome pour les icônes -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <script
+            src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div class="min-h-screen gradient-bg overflow-x-hidden">
+            <!-- Barre de navigation -->
+            <nav
+                class="fixed w-full z-50 backdrop-blur-md bg-white/80 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between h-16">
+                        <div class="flex items-center">
+                            <a href="index.html"
+                                class="text-xl font-bold text-gray-900 dark:text-white flex items-center">
+                                <span
+                                    class="bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text">MA</span>
+                                <span class="ml-2 hidden sm:inline">Marc
+                                    Apedoh</span>
+                            </a>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <a href="index.html#projects"
+                                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Projets</a>
+                            <a href="index.html#skills"
+                                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Compétences</a>
+                            <a href="index.html#about"
+                                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">À
+                                propos</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <section id="projects"
+                class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-3xl font-bold text-gray-900 dark:text-white">Mes
+                        <span
+                            class="bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text">Projets</span>
+                    </h2>
+                    <p
+                        class="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+                        Une sélection de mes projets GitHub classés par
+                        technologie.
+                    </p>
+                </div>
+
+                <div id="projects-container">
+                    <!-- Les projets seront chargés dynamiquement ici -->
+                    <div class="text-center py-12">
+                        <i
+                            class="fas fa-spinner fa-spin text-2xl text-purple-600 dark:text-purple-400 mb-4"></i>
+                        <p class="text-gray-600 dark:text-gray-400">Chargement
+                            des projets...</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Footer -->
+            <footer
+                class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-200 dark:border-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3
+                            class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Marc
+                            Apedoh</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Développeur full-stack passionné par la création de
+                            solutions innovantes.
+                        </p>
+                    </div>
+                    <div>
+                        <h3
+                            class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Navigation</h3>
+                        <ul class="space-y-2">
+                            <li><a href="index.html"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Accueil</a></li>
+                            <li><a href="index.html#projects"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Projets</a></li>
+                            <li><a href="index.html#skills"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Compétences</a></li>
+                            <li><a href="index.html#about"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">À
+                                    propos</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3
+                            class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Réseaux</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/marcapedoh"
+                                target="_blank"
+                                class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-red-100 dark:hover:bg-red-900 hover:text-red-600 dark:hover:text-red-400 transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3
+                            class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Contact</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-2">
+                            <i class="fas fa-envelope mr-2"></i>
+                            apedohmarc5@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="script.js"> </script>
+
+    </body>
+</html>

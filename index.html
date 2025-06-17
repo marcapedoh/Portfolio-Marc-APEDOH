@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marc Apedoh - Portfolio Développeur</title>
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Font Awesome pour les icônes -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Framer Motion -->
+        <script
+            src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="bg-white dark:bg-gray-900 transition-colors duration-300">
+        <!-- Effet de particules -->
+        <div id="particles-js"></div>
+
+        <!-- Curseur personnalisé -->
+        <div class="cursor-trail"></div>
+
+        <!-- Conteneur principal -->
+        <div class="min-h-screen gradient-bg overflow-x-hidden">
+            <!-- Barre de navigation -->
+            <nav
+                class="fixed w-full z-50 backdrop-blur-md bg-white/80 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex justify-between h-16">
+                        <div class="flex items-center">
+                            <a href="#"
+                                class="text-xl font-bold text-gray-900 dark:text-white flex items-center">
+                                <span
+                                    class="bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text">MA</span>
+                                <span class="ml-2 hidden sm:inline">Marc
+                                    Apedoh</span>
+                            </a>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <a href="#projects"
+                                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Projets</a>
+                            <a href="#skills"
+                                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Compétences</a>
+                            <a href="#about"
+                                class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">À
+                                propos</a>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Hero Section -->
+            <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 animate-fadeIn">
+                        <h1
+                            class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+                            <span
+                                class="bg-gradient-to-r from-purple-600 via-blue-500 to-green-500 text-transparent bg-clip-text">Innovation</span>
+                            <br>et <span
+                                class="bg-gradient-to-r from-orange-500 to-red-500 text-transparent bg-clip-text">Créativité</span>
+                        </h1>
+                        <p class="text-lg text-gray-600 dark:text-gray-300">
+                            Développeur full-stack passionné par la création de
+                            solutions innovantes et performantes.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#projects"
+                                class="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                Voir mes projets
+                            </a>
+                            <a href="https://github.com/marcapedoh"
+                                target="_blank"
+                                class="px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">
+                                Mon GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative hidden lg:block">
+                        <div
+                            class="absolute -top-10 -left-10 w-32 h-32 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"></div>
+                        <div
+                            class="absolute -bottom-10 -right-10 w-32 h-32 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float delay-200"></div>
+                        <div
+                            class="absolute top-20 right-20 w-32 h-32 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float delay-400"></div>
+                        <div
+                            class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-700 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                            <div
+                                class="p-4 bg-gray-100 dark:bg-gray-700 flex space-x-2">
+                                <div
+                                    class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div
+                                    class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div
+                                    class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-center space-x-2 mb-4">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold">MA</div>
+                                    <div>
+                                        <div
+                                            class="h-4 w-32 bg-gray-200 dark:bg-gray-600 rounded"></div>
+                                        <div
+                                            class="h-3 w-24 bg-gray-200 dark:bg-gray-600 rounded mt-1"></div>
+                                    </div>
+                                </div>
+                                <div class="space-y-2">
+                                    <div
+                                        class="h-4 w-full bg-gray-200 dark:bg-gray-600 rounded"></div>
+                                    <div
+                                        class="h-4 w-5/6 bg-gray-200 dark:bg-gray-600 rounded"></div>
+                                    <div
+                                        class="h-4 w-4/6 bg-gray-200 dark:bg-gray-600 rounded"></div>
+                                </div>
+                                <div class="mt-6 grid grid-cols-4 gap-2">
+                                    <div
+                                        class="h-2 bg-purple-500 rounded"></div>
+                                    <div class="h-2 bg-blue-500 rounded"></div>
+                                    <div class="h-2 bg-green-500 rounded"></div>
+                                    <div
+                                        class="h-2 bg-orange-500 rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Statistiques -->
+            <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 transform hover:scale-105 transition-transform duration-300 animate-fadeIn delay-100">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p
+                                    class="text-gray-500 dark:text-gray-400">Projets
+                                    réalisés</p>
+                                <h3
+                                    class="text-3xl font-bold text-gray-900 dark:text-white mt-2">
+                                    <span class="counter"
+                                        data-target="27">0</span>+
+                                </h3>
+                            </div>
+                            <div
+                                class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center">
+                                <i
+                                    class="fas fa-code text-purple-600 dark:text-purple-300 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 transform hover:scale-105 transition-transform duration-300 animate-fadeIn delay-200">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p
+                                    class="text-gray-500 dark:text-gray-400">Contributions</p>
+                                <h3
+                                    class="text-3xl font-bold text-gray-900 dark:text-white mt-2">
+                                    <span class="counter"
+                                        data-target="142">0</span>+
+                                </h3>
+                            </div>
+                            <div
+                                class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
+                                <i
+                                    class="fab fa-github text-blue-600 dark:text-blue-300 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 transform hover:scale-105 transition-transform duration-300 animate-fadeIn delay-300">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p
+                                    class="text-gray-500 dark:text-gray-400">Expérience</p>
+                                <h3
+                                    class="text-3xl font-bold text-gray-900 dark:text-white mt-2">
+                                    <span class="counter"
+                                        data-target="2">0</span> ans
+                                </h3>
+                            </div>
+                            <div
+                                class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                                <i
+                                    class="fas fa-briefcase text-green-600 dark:text-green-300 text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Compétences -->
+            <section id="skills"
+                class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-3xl font-bold text-gray-900 dark:text-white">Mes
+                        <span
+                            class="bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text">Compétences</span></h2>
+                    <p
+                        class="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+                        Technologies et outils que j'utilise pour créer des
+                        solutions innovantes et performantes.
+                    </p>
+                </div>
+
+                <div
+                    class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <!-- Java -->
+                    <div
+                        class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-3">
+                                <i
+                                    class="fab fa-java text-red-600 dark:text-red-400 text-3xl"></i>
+                            </div>
+                            <h3
+                                class="font-medium text-gray-900 dark:text-white">Java</h3>
+                            <div
+                                class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                                <div class="bg-red-500 h-2 rounded-full"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div
+                        class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-16 h-16 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center mb-3">
+                                <i
+                                    class="fab fa-js text-yellow-500 dark:text-yellow-300 text-3xl"></i>
+                            </div>
+                            <h3
+                                class="font-medium text-gray-900 dark:text-white">JavaScript</h3>
+                            <div
+                                class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                                <div class="bg-yellow-500 h-2 rounded-full"
+                                    style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Angular -->
+                    <div
+                        class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-3">
+                                <i
+                                    class="fab fa-angular text-red-600 dark:text-red-400 text-3xl"></i>
+                            </div>
+                            <h3
+                                class="font-medium text-gray-900 dark:text-white">Angular</h3>
+                            <div
+                                class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                                <div class="bg-red-500 h-2 rounded-full"
+                                    style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vue -->
+                    <div
+                        class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-3">
+                                <i
+                                    class="fab fa-vuejs text-green-500 dark:text-green-300 text-3xl"></i>
+                            </div>
+                            <h3
+                                class="font-medium text-gray-900 dark:text-white">Vue.js</h3>
+                            <div
+                                class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                                <div class="bg-green-500 h-2 rounded-full"
+                                    style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Laravel -->
+                    <div
+                        class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mb-3">
+                                <i
+                                    class="fab fa-laravel text-red-600 dark:text-red-400 text-3xl"></i>
+                            </div>
+                            <h3
+                                class="font-medium text-gray-900 dark:text-white">Laravel</h3>
+                            <div
+                                class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                                <div class="bg-red-500 h-2 rounded-full"
+                                    style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Next.js -->
+                    <div
+                        class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-16 h-16 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center mb-3">
+                                <i
+                                    class="fas fa-code text-gray-700 dark:text-gray-300 text-3xl"></i>
+                            </div>
+                            <h3
+                                class="font-medium text-gray-900 dark:text-white">Next.js</h3>
+                            <div
+                                class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                                <div
+                                    class="bg-gray-700 dark:bg-gray-300 h-2 rounded-full"
+                                    style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Docker -->
+                    <div
+                        class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-3">
+                                <i
+                                    class="fab fa-docker text-blue-500 dark:text-blue-300 text-3xl"></i>
+                            </div>
+                            <h3
+                                class="font-medium text-gray-900 dark:text-white">Docker</h3>
+                            <div
+                                class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                                <div class="bg-blue-500 h-2 rounded-full"
+                                    style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- R -->
+                    <div
+                        class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-3">
+                                <i
+                                    class="fas fa-chart-line text-blue-600 dark:text-blue-400 text-3xl"></i>
+                            </div>
+                            <h3
+                                class="font-medium text-gray-900 dark:text-white">R</h3>
+                            <div
+                                class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                                <div class="bg-blue-500 h-2 rounded-full"
+                                    style="width: 55%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Python -->
+                    <div
+                        class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-3">
+                                <i
+                                    class="fab fa-python text-blue-600 dark:text-blue-400 text-3xl"></i>
+                            </div>
+                            <h3
+                                class="font-medium text-gray-900 dark:text-white">Python</h3>
+                            <div
+                                class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                                <div class="bg-blue-500 h-2 rounded-full"
+                                    style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SQL -->
+                    <div
+                        class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-3">
+                                <i
+                                    class="fas fa-database text-purple-600 dark:text-purple-400 text-3xl"></i>
+                            </div>
+                            <h3
+                                class="font-medium text-gray-900 dark:text-white">SQL</h3>
+                            <div
+                                class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                                <div class="bg-purple-500 h-2 rounded-full"
+                                    style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Git -->
+                    <div
+                        class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mb-3">
+                                <i
+                                    class="fab fa-git-alt text-orange-600 dark:text-orange-400 text-3xl"></i>
+                            </div>
+                            <h3
+                                class="font-medium text-gray-900 dark:text-white">Git</h3>
+                            <div
+                                class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                                <div class="bg-orange-500 h-2 rounded-full"
+                                    style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Linux -->
+                    <div
+                        class="skill-card bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700 transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="w-16 h-16 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center mb-3">
+                                <i
+                                    class="fab fa-linux text-yellow-600 dark:text-yellow-400 text-3xl"></i>
+                            </div>
+                            <h3
+                                class="font-medium text-gray-900 dark:text-white">Linux</h3>
+                            <div
+                                class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-3">
+                                <div class="bg-yellow-500 h-2 rounded-full"
+                                    style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Projets -->
+            <section id="projects"
+                class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2
+                        class="text-3xl font-bold text-gray-900 dark:text-white">Mes
+                        <span
+                            class="bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text">Projets</span></h2>
+                    <p
+                        class="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+                        Une sélection de mes projets récents sur GitHub.
+                    </p>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Projet 1 -->
+                    <div
+                        class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 animate-fadeIn delay-100">
+                        <div
+                            class="h-48 bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                            <i class="fas fa-code text-white text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-xl font-bold text-gray-900 dark:text-white">Application
+                                    de Gestion</h3>
+                                <div class="flex space-x-2">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">Angular</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">Java</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mt-3">
+                                Application complète de gestion avec interface
+                                utilisateur moderne et backend robuste.
+                            </p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <div
+                                    class="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+                                    <i class="far fa-star mr-1"></i>
+                                    <span>24</span>
+                                </div>
+                                <a href="project-gestion.html"
+                                    class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline">Voir
+                                    le projet →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet 2 -->
+                    <div
+                        class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 animate-fadeIn delay-200">
+                        <div
+                            class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center">
+                            <i
+                                class="fas fa-chart-line text-white text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-xl font-bold text-gray-900 dark:text-white">Analyse
+                                    de Données</h3>
+                                <div class="flex space-x-2">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">R</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full">Python</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mt-3">
+                                Outil d'analyse de données avec visualisations
+                                interactives et rapports automatisés.
+                            </p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <div
+                                    class="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+                                    <i class="far fa-star mr-1"></i>
+                                    <span>18</span>
+                                </div>
+                                <a href="project-gestion.html"
+                                    class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline">Voir
+                                    le projet →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projet 3 -->
+                    <div
+                        class="project-card bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 animate-fadeIn delay-300">
+                        <div
+                            class="h-48 bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center">
+                            <i
+                                class="fas fa-mobile-alt text-white text-5xl"></i>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-start">
+                                <h3
+                                    class="text-xl font-bold text-gray-900 dark:text-white">Application
+                                    Mobile</h3>
+                                <div class="flex space-x-2">
+                                    <span
+                                        class="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full">Flutter</span>
+                                    <span
+                                        class="text-xs px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full">.NET
+                                        MAUI</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-400 mt-3">
+                                Application mobile hybride avec synchronisation
+                                en temps réel et interface intuitive.
+                            </p>
+                            <div class="mt-4 flex justify-between items-center">
+                                <div
+                                    class="flex items-center text-gray-500 dark:text-gray-400 text-sm">
+                                    <i class="far fa-star mr-1"></i>
+                                    <span>32</span>
+                                </div>
+                                <a href="project-gestion.html"
+                                    class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline">Voir
+                                    le projet →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="https://github.com/marcapedoh" target="_blank"
+                        class="inline-flex items-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300">
+                        <i class="fab fa-github mr-2"></i>
+                        Voir tous mes projets sur GitHub
+                    </a>
+                </div>
+            </section>
+
+            <!-- Section GitHub Contributions -->
+            <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-center mb-6">
+                        <h2
+                            class="text-2xl font-bold text-gray-900 dark:text-white">Mes
+                            Contributions GitHub</h2>
+                        <div class="flex items-center mt-4 md:mt-0">
+                            <span
+                                class="text-sm text-gray-500 dark:text-gray-400 mr-2">Année
+                                en cours</span>
+                            <div class="relative">
+                                <select
+                                    class="appearance-none bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 py-2 px-4 pr-8 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                    <option>2023</option>
+                                    <option>2022</option>
+                                    <option>2021</option>
+                                </select>
+                                <div
+                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 dark:text-gray-300">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder pour la grille de contributions GitHub -->
+                    <div
+                        class="grid-mask overflow-hidden h-64 flex items-center justify-center">
+                        <div class="text-center">
+                            <i
+                                class="fab fa-github text-5xl text-gray-400 dark:text-gray-600 mb-4"></i>
+                            <p class="text-gray-500 dark:text-gray-400">Grille
+                                des contributions GitHub</p>
+                            <p
+                                class="text-sm text-gray-400 dark:text-gray-500 mt-2">(Intégration
+                                avec l'API GitHub possible)</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div
+                            class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                            <p
+                                class="text-sm text-gray-500 dark:text-gray-400">Contributions</p>
+                            <p
+                                class="text-xl font-bold text-gray-900 dark:text-white">142</p>
+                        </div>
+                        <div
+                            class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                            <p
+                                class="text-sm text-gray-500 dark:text-gray-400">Streak
+                                actuel</p>
+                            <p
+                                class="text-xl font-bold text-gray-900 dark:text-white">12
+                                jours</p>
+                        </div>
+                        <div
+                            class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                            <p
+                                class="text-sm text-gray-500 dark:text-gray-400">Streak
+                                max</p>
+                            <p
+                                class="text-xl font-bold text-gray-900 dark:text-white">48
+                                jours</p>
+                        </div>
+                        <div
+                            class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                            <p
+                                class="text-sm text-gray-500 dark:text-gray-400">Dernière
+                                activité</p>
+                            <p
+                                class="text-xl font-bold text-gray-900 dark:text-white">Aujourd'hui</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section À propos -->
+            <section id="about"
+                class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div
+                    class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <h2
+                            class="text-3xl font-bold text-gray-900 dark:text-white mb-6">À
+                            <span
+                                class="bg-gradient-to-r from-purple-600 to-blue-500 text-transparent bg-clip-text">propos</span>
+                            de moi</h2>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Passionné par le développement logiciel et
+                            l'innovation technologique, je mets mes compétences
+                            au service de projets ambitieux et créatifs.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Avec une expertise en développement full-stack et
+                            une solide expérience dans plusieurs langages et
+                            frameworks, je crée des solutions robustes,
+                            évolutives et performantes.
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6">
+                            Mon approche combine rigueur technique, créativité
+                            et attention aux besoins utilisateurs pour livrer
+                            des produits de qualité.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a
+                                href="assets/APEDOH KOSSÍ KÉKÉLI CV.pdf.pdf"
+                                class="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 text-white rounded-lg font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                Télécharger mon CV
+                            </a>
+                            <a href="#"
+                                class="px-6 py-3 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-300 transform hover:scale-105">
+                                Me contacter
+                            </a>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2 relative">
+                        <div
+                            class="absolute -top-10 -left-10 w-32 h-32 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"></div>
+                        <div
+                            class="absolute -bottom-10 -right-10 w-32 h-32 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float delay-200"></div>
+                        <div
+                            class="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-700 p-6">
+                            <div class="flex items-center space-x-4 mb-6">
+                                <div
+                                    class="w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center text-white text-2xl font-bold">MA</div>
+                                <div>
+                                    <h3
+                                        class="text-xl font-bold text-gray-900 dark:text-white">Marc
+                                        Apedoh</h3>
+                                    <p
+                                        class="text-gray-600 dark:text-gray-400">Développeur
+                                        Full-Stack</p>
+                                </div>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900 flex items-center justify-center text-purple-600 dark:text-purple-300 mr-4">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-gray-500 dark:text-gray-400 text-sm">Localisation</p>
+                                        <p
+                                            class="text-gray-900 dark:text-white">Gabon,
+                                            Libreville</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center text-blue-600 dark:text-blue-300 mr-4">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-gray-500 dark:text-gray-400 text-sm">Email</p>
+                                        <p
+                                            class="text-gray-900 dark:text-white">apedohmarc5@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center text-green-600 dark:text-green-300 mr-4">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div>
+                                        <p
+                                            class="text-gray-500 dark:text-gray-400 text-sm">GitHub</p>
+                                        <a href="https://github.com/marcapedoh"
+                                            target="_blank"
+                                            class="text-gray-900 dark:text-white hover:underline">github.com/marcapedoh</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer
+                class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-200 dark:border-gray-800">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3
+                            class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Marc
+                            Apedoh</h3>
+                        <p class="text-gray-600 dark:text-gray-400">
+                            Développeur full-stack passionné par la création de
+                            solutions innovantes.
+                        </p>
+                    </div>
+                    <div>
+                        <h3
+                            class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Navigation</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Accueil</a></li>
+                            <li><a href="#projects"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Projets</a></li>
+                            <li><a href="#skills"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">Compétences</a></li>
+                            <li><a href="#about"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">À
+                                    propos</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3
+                            class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Réseaux</h3>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-purple-900 hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-red-100 dark:hover:bg-red-900 hover:text-red-600 dark:hover:text-red-400 transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3
+                            class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Newsletter</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Abonnez-vous pour recevoir mes dernières actualités.
+                        </p>
+                        <form class="flex">
+                            <input type="email" placeholder="Votre email"
+                                class="px-4 py-2 rounded-l-lg border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white w-full">
+                            <button type="submit"
+                                class="px-4 py-2 bg-purple-600 text-white rounded-r-lg hover:bg-purple-700 transition-colors">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <!-- <div
+                    class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-gray-600 dark:text-gray-400">
+                    <p>© 2023 Marc Apedoh. Tous droits réservés.</p>
+                </div> -->
+            </footer>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
